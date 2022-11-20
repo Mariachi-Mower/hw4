@@ -8,29 +8,6 @@
 
 
 /*
-COMPlETED, NOT TESTED:
-* BST constructor
-* void insert(const Key& key);
-* operator !=
-* operator ==
-* iterator default constructor
-* iterator ptr explicit constructor
-* isBalanced
-* cIfBalanced
-* predecessor
-* BST Destructor
-* Node<Key, Value>* getSmallestNode();
-* void clear():
-* void remove(const Key& key);
-* operator++:
-*/
-
-
-
-
-
-
-/*
  * A templated class for a Node in a search tree.
  * The getters for parent/left/right are virtual so
  * that they can be overridden for future kinds of
@@ -225,6 +202,10 @@ public:
     bool isBalanced() const; //TODO
     void print() const;
     bool empty() const;
+		/*
+		Node<Key, Value>* getRoot() const;
+		void setRoot(Node<Key, Value>* no);
+		*/
 
     template<typename PPKey, typename PPValue>
     friend void prettyPrintBST(BinarySearchTree<PPKey, PPValue> & tree);
@@ -425,6 +406,10 @@ BinarySearchTree<Key, Value>::~BinarySearchTree()
     //should just call the clear function.
 		clear();
 }
+
+
+
+
 
 /**
  * Returns true if tree is empty
